@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>WAD ASSIGNMENT NO 2(USING JQURY)</title>
+<link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#loadBtn").click(function() {
+        $.get("text.txt", function(data) {
+          $("#text").html(data);
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="header">
+    <h1>WAD ASSIGNMENT NO 2(USING JQURY)</h1>
+  </div>
+  <div id="content">
+    <button id="loadBtn">Load Text</button>
+    <p id="text"></p>
+  </div>
+</body>
+</html>
